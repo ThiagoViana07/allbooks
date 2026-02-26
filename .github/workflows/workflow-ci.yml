@@ -4,11 +4,13 @@
 name: Workflow de Integração Contínua
 
 on:
+  push:
+    branches: [ "main", "develop"] 
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop"]
 
 jobs:
-  testes:
+  continouns-integration:
 
     runs-on: ubuntu-latest
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
